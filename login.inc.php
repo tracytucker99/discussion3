@@ -17,7 +17,7 @@ $pwd = $_POST['pwd'];
 $sql = "Select * from user WHERE uid='$uid' AND pwd='$pwd'";
 $result = $conn->query($sql);
 
-if(!$row = $result->fetch_assoc()){
+if(!$row == $result->fetch_assoc()){
     echo "Your username or password is incorrect!"."<br>"."<Press button to retry>"."<br>"."<form action='index.php' >
             <button>RETRY</button>           
         </form>";
